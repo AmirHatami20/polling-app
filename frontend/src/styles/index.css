@@ -1,0 +1,48 @@
+@import "tailwindcss";
+
+@layer base {
+    html {
+        font-family: 'Vazirmatn', sans-serif;
+        direction: rtl;
+    }
+
+    body {
+        background-color: #fff;
+        overflow-x: hidden;
+    }
+
+    input::-ms-reveal {
+        display: none;
+    }
+}
+
+@layer components {
+    .input-box {
+        @apply w-full flex justify-between gap-3 text-sm text-black bg-slate-100 px-4 py-3 mb-3 mt-2 border border-slate-200 rounded outline-none ;
+    }
+
+    .btn-primary {
+        @apply w-full text-sm font-medium justify-center text-white shadow-lg shadow-primary/5 bg-primary py-3 my-1.5 rounded hover:bg-primary/15 hover:text-primary cursor-pointer transition-colors;
+    }
+
+    .option-btn {
+        @apply text-xs font-medium text-sky-700 bg-sky-100 px-4 py-1 rounded-lg border border-sky-50 cursor-pointer hover:border-primary;
+    }
+
+    .btn-small {
+        @apply flex items-center gap-1 text-xs font-medium bg-primary text-white hover:bg-sky-200/60 hover:text-primary rounded px-3 py-[4px] cursor-pointer;
+    }
+
+    .icon-btn {
+        @apply text-[20px] text-slate-300 cursor-pointer hover:text-blue-500;
+    }
+
+    .info-text {
+        @apply text-sm text-primary font-medium text-center bg-gray-100 rounded-lg p-3;
+    }
+}
+
+@theme {
+    --color-primary: #06b6d4;
+    --color-secondary: #ef863e
+}
