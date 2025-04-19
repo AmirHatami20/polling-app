@@ -12,7 +12,8 @@ const pollRoutes = require("./routes/pollRoutes");
 const app = express();
 
 app.use(cors({
-    origin: process.env.CLIENT_URL || "*",
+    origin: 'https://polling-app-frontend-u5w9.onrender.com',
+    credentials: true,
     method: ["GET", "POST", "PUT", "DELETE"],
     allowedHeaders: ["Content-Type", "Authorization"],
 }));
